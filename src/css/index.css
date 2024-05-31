@@ -1,0 +1,257 @@
+/*---------------------------------------------------*/ 
+/*             Styles file                           */
+/*---------------------------------------------------*/
+
+/*-------------COLOR PALLET------------------*/
+:root {
+    --app-dark-gray: #303030;
+    --app-lith-gray: #dedcdc;
+    --app-white-text:  #e4e2e2;
+    --app-blue: #2e5991;
+    --app-dark-blue: #254978;
+    --app-medium-blue:  #6d7886;
+    --ligh-blue-background: #ecf2f9;
+    --ligh-yellow: #fbfec0;
+}
+
+body {
+    font-family: "Raleway", sans-serif;
+}
+
+/*---------------------------------------------------*/ 
+/*          Container Classes                        */
+/*---------------------------------------------------*/ 
+.container {
+    width: min(100% - 35px, 1080px);
+    margin-inline: auto;
+}
+
+.flexbox {
+    display: flex;
+    justify-content: space-around;
+}
+
+/*---------------------------------------------------*/ 
+/*                    Header                         */
+/*---------------------------------------------------*/ 
+header {
+    display: flex;
+    overflow:hidden;
+    background-color: var(--app-dark-gray);
+    height: 80px; /*height of the header and vertically centering text */
+}
+
+.user{
+    width: 40%;
+    line-height: 80px;
+}
+
+.logo {
+    color: aliceblue;
+    line-height: 80px; /*height of the header and vertically centering text */
+    font-size: 38px;
+}
+
+header div {
+    width: 20%;
+}
+
+.navigation {
+    width: 40%;
+    text-align: right;
+}
+
+.navigation ul {
+    list-style-type: none;
+}
+
+.navigation ul li {
+    display: inline;
+    line-height: 80px;
+}
+  
+.navigation ul li a {
+    color: aliceblue;
+    padding: 0 15px;
+    font-size: 16px;
+    transition: all 0.3s ease-in-out;
+}
+  
+.navigation ul li a:hover {
+    background-color: var(--app-dark-gray);
+    color: var(--app-blue);
+}
+  
+ 
+/*---------------------------------------------------*/ 
+/*                   HERO                            */
+/*---------------------------------------------------*/ 
+.hero {
+    position: relative;
+    width: 100%;
+    height: calc(70vh - 60px);
+    overflow: hidden;
+    background-image: url(../img/pexels-suzyhazelwood-1629236.jpg);
+    background-attachment: fixed;
+    background-position: center top;
+}
+
+.overlay {
+    mix-blend-mode: multiply;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(238, 238, 241, 0.4); 
+}
+
+.content-hero {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 40px;
+    line-height: 1.2;
+    padding: 25px;
+}
+
+.content-hero h1 {
+    font-weight: 300;
+    color: var(--ligh-blue-background);
+    letter-spacing: 0.4px;
+    line-height: 1.6;
+}
+
+.content-hero h4 {
+    font-weight: 400;
+    color: var(--app-white-text);
+    letter-spacing: 0.4px;
+    line-height: 1.6;
+}
+
+.hero-btn {
+    display: inline-block;
+    margin-right: 10px;
+    padding: 10px 20px;
+    background-color: var(--app-lith-gray);
+    font-size: 22px;
+    font-weight: 400;
+    color: var(--app-blue);
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.2s ease-in-out;
+    border: none;
+}
+
+.hero-btn:hover {
+    background-color: var(--app-medium-blue);
+    color: white;
+}
+
+/*---------------------------------------------------*/ 
+/*                   Main                            */
+/*---------------------------------------------------*/ 
+main{
+    background-color: rgb(254, 255, 255);
+}
+
+.section-gallery{
+    text-align: center;
+}
+
+.section-gallery h2 {
+    margin-top: 50px;
+    font-weight: 600;
+    font-size: 40px;
+    color: var(--app-blue);
+}
+
+@keyframes anim {
+    from {
+        opacity: 0;
+        translate: 0 10px;
+    }
+
+    to {
+        opacity: 1;
+        translate: 0 0px;
+    }
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    animation: anim 0.5s ease-in;
+}
+
+.grid-element-container {
+    display: flex;
+    background-color:var(--app-lith-gray);
+    margin: 20px 10px;
+    border-radius: 10px;
+    align-items: flex-start;
+}
+
+img {
+    width: 100%;
+    height: 100%; 
+}
+
+.grid-element-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  /*Maintain aspect ratio and cover the area */
+    border-radius: 10px 10px;
+}
+
+/*---------------------------------------------------*/ 
+/*                    Footer                         */
+/*---------------------------------------------------*/ 
+footer {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    text-align: center; 
+    background-color: var(--app-lith-gray);
+    height: 160px;
+    overflow: hidden;
+}
+
+.div-social-media {
+    height: 160px;
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Center icons horizontally */
+    align-items: center; /* Center icons vertically */
+    text-align: center; 
+    gap: 10px; /* Space between icons */
+}
+
+footer .div-social-media a {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    background-color: rgba(255, 255, 255.0.2);
+    margin: 0 10px;
+    text-align: center; /*Icons are like a text*/
+    border-radius: 50px;
+    color: var(--app-blue);
+    transition: all 0.5s ease;
+}
+
+footer .div-social-media a i {
+    font-size: 20px;  
+}
+
+.div-social-media a:hover {
+    color: var(--app-lith-gray);
+    background-color: var(--app-medium-blue);
+}
